@@ -1,0 +1,247 @@
+.cliente-auth {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: radial-gradient(circle at 70% 20%, rgba(30, 99, 214, .18), transparent 35%), #181a1d;
+}
+
+.cliente-form {
+    max-width: 520px;
+}
+
+.cliente-form input {
+    margin-bottom: 14px;
+}
+
+.login-links {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 18px;
+    font-size: 13px;
+}
+
+.login-links a {
+    color: #1e63d6;
+}
+
+.sucesso {
+    padding: 10px;
+    margin-bottom: 15px !important;
+    border: 1px solid rgba(57, 216, 121, .3);
+    border-radius: 6px;
+    background: rgba(57, 216, 121, .1);
+    color: #70e69c !important;
+}
+
+.cliente-layout {
+    min-height: 100vh;
+    background: #181a1d;
+    color: #f5f5f5;
+}
+
+.cliente-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 18px 5%;
+    background: #1e63d6;
+    border-bottom: 1px solid #1853b6;
+}
+
+.cliente-header h1 {
+    color: #fff;
+    font-size: 22px;
+}
+
+.cliente-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: flex-end;
+}
+
+.cliente-nav a,
+.cliente-actions a,
+.cliente-card button {
+    display: inline-block;
+    padding: 10px 13px;
+    border: 1px solid #1e63d6;
+    border-radius: 7px;
+    color: #fff;
+    background: #1e63d6;
+}
+
+.cliente-nav a:hover,
+.cliente-actions a:hover,
+.cliente-card button:hover {
+    border-color: #3979e3;
+    background: #3979e3;
+    color: #fff;
+}
+
+.cliente-content {
+    width: min(1180px, 90%);
+    margin: 0 auto;
+    padding: 48px 0;
+}
+
+.cliente-content h2 {
+    margin-bottom: 8px;
+}
+
+.cliente-muted {
+    color: #9ca3ad;
+}
+
+.cliente-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 18px;
+    margin-top: 28px;
+}
+
+.cliente-card {
+    padding: 22px;
+    border: 1px solid #292f37;
+    border-radius: 8px;
+    background: #15191f;
+}
+
+.cliente-card h3 {
+    margin-bottom: 10px;
+    color: #1e63d6;
+}
+
+.cliente-card p {
+    margin: 7px 0;
+    color: #d7dbe0;
+}
+
+.cliente-card form {
+    margin-top: 18px;
+}
+
+.cliente-card input,
+.cliente-card select,
+.cliente-card textarea {
+    width: 100%;
+    margin: 5px 0 12px;
+    padding: 11px;
+    border: 1px solid #30363e;
+    border-radius: 6px;
+    background: #0b0e12;
+    color: #fff;
+}
+
+.cliente-card textarea {
+    min-height: 90px;
+}
+
+.cliente-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 24px;
+}
+
+.cliente-progress {
+    display: flex;
+    gap: 5px;
+    margin: 16px 0;
+}
+
+.cliente-progress span {
+    flex: 1;
+    height: 6px;
+    border-radius: 4px;
+    background: #41474f;
+}
+
+.cliente-progress span.concluida,
+.cliente-progress span.atual {
+    background: #1e63d6;
+}
+
+.cliente-next-steps {
+    margin-top: 18px;
+}
+
+.cliente-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid #292f37;
+}
+
+.cliente-step:last-child {
+    border-bottom: 0;
+}
+
+.cliente-step > span {
+    display: grid;
+    place-items: center;
+    width: 28px;
+    height: 28px;
+    flex: 0 0 28px;
+    border-radius: 50%;
+    background: #41474f;
+    color: #fff;
+    font-size: 12px;
+}
+
+.cliente-step.concluido > span,
+.cliente-step.atual > span {
+    background: #1e63d6;
+}
+
+.cliente-step strong {
+    font-size: 14px;
+}
+
+.cliente-step p {
+    margin: 3px 0 0;
+    font-size: 13px;
+}
+
+.cliente-table-wrap {
+    overflow-x: auto;
+    margin-top: 24px;
+}
+
+.cliente-table {
+    width: 100%;
+    min-width: 680px;
+    border-collapse: collapse;
+    background: #15191f;
+}
+
+.cliente-table th,
+.cliente-table td {
+    padding: 13px;
+    border-bottom: 1px solid #292f37;
+    text-align: left;
+}
+
+.cliente-table th {
+    color: #1e63d6;
+}
+
+@media (max-width: 700px) {
+    .cliente-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .cliente-nav {
+        justify-content: flex-start;
+    }
+
+    .login-links {
+        flex-direction: column;
+    }
+}

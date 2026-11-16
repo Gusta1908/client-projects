@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Novo Orçamento | PJY autoTech</title>
+
+    <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+
+    <!-- FUNDO -->
+    <div class="background">
+        <div class="overlay"></div>
+    </div>
+
+    <!-- CONTEÚDO -->
+    <main class="container">
+
+        <form action="processar_orcamento.php" method="POST" enctype="multipart/form-data">
+
+        <div class="topo">
+            <h1>Cadastro de Explotação</h1>
+            <p>Cadastre as informações do cliente e do veículo</p>
+        </div>
+
+        <div class="form-grid">
+
+            <!-- CLIENTE -->
+            <section class="card">
+                <h2>Informações do cliente</h2>
+
+                <div class="campo">
+                    <label>Nome completo <span>*</span></label>
+                    <input type="text" name="nome" placeholder="Digite o nome do cliente" required maxlength="100">
+                </div>
+
+                <div class="campo">
+                    <label>Telefone</label>
+                    <input type="tel" name="telefone" placeholder="(11) 99999-9999" maxlength="20">
+                </div>
+            </section>
+
+
+            <!-- VEÍCULO -->
+            <section class="card">
+                <h2>Informações do veículo</h2>
+
+                <div class="linha">
+
+                    <div class="campo">
+                        <label>Placa <span>*</span></label>
+                        <input type="text" name="placa" placeholder="ABC1D23" required maxlength="10">
+                    </div>
+
+                    <div class="campo">
+                        <label>Marca / Modelo</label>
+                        <input type="text" name="marca_modelo" placeholder="Ex: Volkswagen Gol" required maxlength="150">
+                    </div>
+
+                </div>
+
+                <div class="linha">
+
+                    <div class="campo">
+                        <label>Ano</label>
+                        <input type="number" name="ano" placeholder="Ex: 2020" min="1900" max="2100">
+                    </div>
+
+                    <div class="campo">
+                        <label>Cor</label>
+                        <input type="text" name="cor" placeholder="Ex: Prata" maxlength="50">
+                    </div>
+
+                </div>
+
+                <div class="linha">
+
+                    <div class="campo">
+                        <label>Quilometragem</label>
+                        <input type="number" name="quilometragem" placeholder="Ex: 50000" min="0" max="9999999">
+                    </div>
+
+                    <div class="campo">
+                        <label>Combustível</label>
+
+                        <select name="combustivel">
+                            <option value="">Selecione</option>
+                            <option value="Gasolina">Gasolina</option>
+                            <option value="Etanol">Etanol</option>
+                            <option value="Flex">Flex</option>
+                            <option value="Diesel">Diesel</option>
+                            <option value="Eletrico">Elétrico</option>
+                        </select>
+                    </div>
+
+                </div>
+            </section>
+
+
+            <!-- DETALHES -->
+            <section class="card detalhes">
+
+                <h2>Detalhes do explote</h2>
+
+                <div class="linha">
+
+                
+
+                    <div class="campo">
+                        <label>Já fez orçamento?</label>
+
+                        <div class="botoes-radio">
+
+                            <label class="radio">
+                                <input type="radio" name="orcamento_anterior" value="1" checked>
+                                <span>Sim</span>
+                            </label>
+
+                            <label class="radio">
+                                <input type="radio" name="orcamento_anterior" value="0">
+                                <span>Não</span>
+                            </label>
+
+                        </div>
+                    </div>
+
+                    <div class="campo">
+                        <label>Prioridade</label>
+
+                        <select name="prioridade">
+                            <option value="normal">Normal</option>
+                            <option value="urgente">Urgente</option>
+                            <option value="muito_urgente">Muito urgente</option>
+                        </select>
+                    </div>
+
+                </div>
+
+
+                <div class="linha">
+
+                    <div class="campo grande">
+                        <label>Problema relatado</label>
+
+                        <textarea
+                            placeholder="Descreva o problema relatado pelo cliente..."
+                        name="problema" required maxlength="5000"></textarea>
+                    </div>
+
+                    <div class="upload">
+
+                        <label>Anexar orçamento</label>
+
+                        <div class="upload-box">
+                            <div class="upload-icon">☁</div>
+
+                            <p>Clique para anexar ou arraste o arquivo aqui</p>
+
+                            <small>
+                                PDF, JPG ou PNG até 10MB
+                            </small>
+
+                            <input type="file" name="anexo" accept=".pdf,.jpg,.jpeg,.png">
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- OUTRAS INFORMAÇÕES -->
+            <section class="card">
+
+                <h2>Outras informações</h2>
+
+                <div class="linha">
+
+                    <div class="campo">
+                        <label>Responsável</label>
+
+                        <select name="responsavel">
+                            <option>Selecione o mecânico</option>
+                            <option>João</option>
+                            <option>Pedro</option>
+                            <option>Carlos</option>
+                        </select>
+                    </div>
+
+                    <div class="campo">
+                        <label>Previsão de entrega</label>
+                        <input type="date" name="previsao_entrega">
+                    </div>
+
+                    <div class="campo">
+                        <label>Observações</label>
+                        <input name="observacoes"
+                            type="text"
+                            placeholder="Observações adicionais..."
+                        >
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+
+        <!-- BOTÕES -->
+        <div class="acoes">
+              
+            <button type="button" onclick="window.location.href='index.php'">
+                voltar
+            </button>
+
+            <button type="reset" class="cancelar">
+                Cancelar
+            </button>
+
+            <button type="submit" class="salvar">
+                Salvar Orçamento
+            </button>
+
+        </div>
+        </form>
+
+    </main>
+
+</body>
+</html>

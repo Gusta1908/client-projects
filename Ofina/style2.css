@@ -1,0 +1,425 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #181a1d;
+    color: #fff;
+    min-height: 100vh;
+}
+
+
+/* =========================
+   FUNDO DO CARRO
+========================= */
+
+.background {
+    position: fixed;
+    inset: 0;
+
+    background-image: url("carro.jpg");
+    background-size: cover;
+    background-position: center;
+
+    z-index: -2;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(5, 5, 5, .95),
+            rgba(5, 5, 5, .82),
+            rgba(5, 5, 5, .90)
+        );
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container {
+    width: 92%;
+    max-width: 1250px;
+
+    margin: 40px auto;
+
+    background: rgba(14, 15, 16, .94);
+
+    border: 1px solid rgba(255,255,255,.08);
+
+    border-radius: 14px;
+
+    padding: 25px;
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.7);
+
+    backdrop-filter: blur(8px);
+}
+
+
+/* =========================
+   TOPO
+========================= */
+
+.topo {
+    margin-bottom: 25px;
+}
+
+.topo h1 {
+    font-size: 25px;
+    margin-bottom: 6px;
+    color: #1e63d6;
+}
+
+.topo p {
+    color: #888;
+    font-size: 14px;
+}
+
+
+/* =========================
+   GRID
+========================= */
+
+.form-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1.5fr;
+
+    gap: 15px;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.card {
+    background: #151718;
+
+    border: 1px solid #292b2d;
+
+    border-radius: 9px;
+
+    padding: 18px;
+}
+
+.card.detalhes {
+    grid-column: 1 / -1;
+}
+
+.card:last-child {
+    grid-column: 1 / -1;
+}
+
+.card h2 {
+    font-size: 14px;
+
+    color: #ddd;
+
+    margin-bottom: 18px;
+
+    font-weight: 600;
+}
+
+
+/* =========================
+   CAMPOS
+========================= */
+
+.linha {
+    display: flex;
+    gap: 15px;
+
+    margin-bottom: 15px;
+}
+
+.campo {
+    flex: 1;
+}
+
+.campo.grande {
+    flex: 1.4;
+}
+
+.campo label {
+    display: block;
+
+    font-size: 12px;
+
+    color: #aaa;
+
+    margin-bottom: 7px;
+}
+
+.campo label span {
+    color: #1e63d6;
+}
+
+
+input,
+select,
+textarea {
+
+    width: 100%;
+
+    background: #0e1011;
+
+    border: 1px solid #303234;
+
+    color: #eee;
+
+    border-radius: 6px;
+
+    padding: 12px;
+
+    outline: none;
+
+    font-size: 13px;
+
+    transition: .2s;
+}
+
+
+input:focus,
+select:focus,
+textarea:focus {
+
+    border-color: #1e63d6;
+
+    box-shadow:
+        0 0 0 2px rgba(30,99,214,.12);
+}
+
+
+input::placeholder,
+textarea::placeholder {
+    color: #606365;
+}
+
+
+textarea {
+    min-height: 120px;
+
+    resize: vertical;
+}
+
+
+/* =========================
+   RADIO
+========================= */
+
+.botoes-radio {
+    display: flex;
+    gap: 8px;
+}
+
+.radio {
+    display: flex !important;
+
+    align-items: center;
+
+    gap: 7px;
+
+    background: #0e1011;
+
+    border: 1px solid #303234;
+
+    padding: 10px 14px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+}
+
+.radio input {
+    width: auto;
+    accent-color: #1e63d6;
+}
+
+
+/* =========================
+   UPLOAD
+========================= */
+
+.upload {
+    flex: 1;
+}
+
+.upload > label {
+    display: block;
+
+    font-size: 12px;
+
+    color: #aaa;
+
+    margin-bottom: 7px;
+}
+
+.upload-box {
+
+    height: 120px;
+
+    border: 1px dashed #444;
+
+    border-radius: 7px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    position: relative;
+
+    background: #101213;
+
+    cursor: pointer;
+
+    text-align: center;
+
+    overflow: hidden;
+}
+
+.upload-box:hover {
+    border-color: #1e63d6;
+}
+
+.upload-icon {
+    font-size: 25px;
+
+    color: #aaa;
+
+    margin-bottom: 5px;
+}
+
+.upload-box p {
+    font-size: 11px;
+
+    color: #aaa;
+}
+
+.upload-box small {
+    color: #666;
+
+    margin-top: 5px;
+
+    font-size: 10px;
+}
+
+.upload-box input {
+    position: absolute;
+
+    inset: 0;
+
+    opacity: 0;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   BOTÕES
+========================= */
+
+.acoes {
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 10px;
+
+    margin-top: 20px;
+}
+
+.acoes button {
+
+    border: none;
+
+    border-radius: 6px;
+
+    padding: 12px 22px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: .2s;
+}
+
+.cancelar {
+    background: #292b2d;
+
+    color: #ccc;
+}
+
+.cancelar:hover {
+    background: #353739;
+}
+
+.salvar {
+    background: #1e63d6;
+
+    color: #fff;
+}
+
+.salvar:hover {
+    background: #3979e3;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media (max-width: 900px) {
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card.detalhes,
+    .card:last-child {
+        grid-column: auto;
+    }
+
+    .linha {
+        flex-direction: column;
+    }
+
+    .container {
+        width: 95%;
+        margin: 20px auto;
+        padding: 15px;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .topo h1 {
+        font-size: 20px;
+    }
+
+    .acoes {
+        flex-direction: column;
+    }
+
+    .acoes button {
+        width: 100%;
+    }
+}
